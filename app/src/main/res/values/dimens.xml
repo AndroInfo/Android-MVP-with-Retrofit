@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+    <dimen name="card_album_radius">0dp</dimen>
+    <dimen name="movie_thumb_height">240dp</dimen>
+    <dimen name="card_content_padding">10dp</dimen>
+    <dimen name="movie_title_size">15dp</dimen>
+    <dimen name="movie_content_size">12dp</dimen>
+    <dimen name="detail_backdrop_height">250dp</dimen>
+    <dimen name="detail_movie_title">22dp</dimen>
+    <dimen name="overview_text_size">13dp</dimen>
+    <dimen name="cast_width">100dp</dimen>
+    <dimen name="cast_heigh">150dp</dimen>
+    <dimen name="no_result_text_size">20dp</dimen>
+</resources>

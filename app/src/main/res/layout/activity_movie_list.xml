@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorViewBg"
+    tools:context=".movie_list.MovieListActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_movie_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_filter"
+        app:elevation="3dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:fabSize="normal"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/tv_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_empty_movies"
+        android:text="@string/no_movies"
+        android:drawablePadding="10dp"
+        android:visibility="gone"
+        android:textSize="@dimen/no_result_text_size"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"/>
+
+
+</RelativeLayout>

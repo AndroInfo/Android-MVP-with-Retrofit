@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/cast_width"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_movie_thumb"
+        android:layout_width="@dimen/cast_width"
+        android:layout_height="@dimen/cast_heigh">
+
+        <ImageView
+            android:id="@+id/iv_profile_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"
+            android:contentDescription="Hold cast profile pic" />
+
+        <ProgressBar
+            android:id="@+id/pb_load_profile"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_character"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingTop="@dimen/card_content_padding"
+        android:textColor="@color/colorTitle"
+        android:textSize="@dimen/overview_text_size"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/overview_text_size"
+        android:typeface="sans" />
+
+</LinearLayout>

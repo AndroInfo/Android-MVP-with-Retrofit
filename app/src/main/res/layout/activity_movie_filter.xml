@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_main_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".movie_filter.MovieFilterActivity">
+
+    <TextView
+        android:id="@+id/tv_release_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text="@string/release_date"
+        android:textColor="@color/colorTitle"
+        android:textSize="@dimen/movie_title_size"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/tv_clear_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text="@string/clear_all"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/movie_title_size"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_release_date_title"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tv_from_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/ic_date"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:text="@string/from"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/overview_text_size"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/tv_to_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/ic_date"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:text="@string/to"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/overview_text_size"
+            android:typeface="sans" />
+    </LinearLayout>
+
+
+</RelativeLayout>

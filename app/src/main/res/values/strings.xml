@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MovieDB</string>
+    <string name="communication_error">Error in getting data. Please try again later.</string>
+    <string name="most_popular_movies">Most Popular Movies</string>
+    <string name="overview">Overview</string>
+    <string name="top_billed_cast">Top Billed Cast</string>
+    <string name="details">Details</string>
+    <string name="homepage">Home Page</string>
+    <string name="tagline">Tagline</string>
+    <string name="Runtime">Runtime</string>
+    <string name="filter">Filter</string>
+    <string name="release_date">Release date:</string>
+    <string name="from">Select From</string>
+    <string name="to">Select To</string>
+    <string name="clear_all">Clear All</string>
+    <string name="error_date_filter">Please select from and to dates.</string>
+    <string name="no_movies">Oops! No result found.</string>
+    <string name="error_data">Something went wrong! Please try again later.</string>
+    <string name="done">Done</string>
+</resources>

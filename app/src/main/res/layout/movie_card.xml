@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        android:elevation="@dimen/card_elevation"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/card_album_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_movie_thumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_movie_thumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/movie_thumb_height"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:contentDescription="Hold movie thumbnail" />
+
+                <ProgressBar
+                    android:id="@+id/pb_load_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_movie_thumb"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/card_content_padding"
+                android:paddingRight="@dimen/card_content_padding"
+                android:paddingTop="@dimen/card_content_padding"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/movie_title_size"
+                android:typeface="sans" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_movie_title"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/card_content_padding"
+                android:paddingLeft="@dimen/card_content_padding"
+                android:paddingRight="@dimen/card_content_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_release_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:textSize="@dimen/movie_content_size" />
+
+
+                <TextView
+                    android:id="@+id/tv_movie_ratings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="0.3"
+                    android:drawableLeft="@drawable/star"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/movie_content_size" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

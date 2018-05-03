@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorViewBg"
+    android:scrollbars="none"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".movie_details.MovieDetailsActivity"
+    tools:showIn="@layout/activity_movie_details">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Card for Movie overview -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_movie_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/card_elevation"
+            app:cardCornerRadius="@dimen/card_album_radius">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_rating_and_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/card_content_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/tv_release_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.5"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_date"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/movie_title_size" />
+
+
+                    <TextView
+                        android:id="@+id/tv_movie_ratings"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0.5"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/big_star"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/movie_title_size" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_overview_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_rating_and_date"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="12"
+                    android:text="@string/overview"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/movie_title_size"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_movie_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_overview_title"
+                    android:layout_marginTop="3dp"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <!--Billed cast cardview -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_production_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_margin"
+            android:elevation="@dimen/card_elevation"
+            app:cardCornerRadius="@dimen/card_album_radius">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_cast_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="12"
+                    android:text="@string/top_billed_cast"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/movie_title_size"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_cast_title">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_cast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"
+                        android:orientation="horizontal"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_cast_loading"
+                        style="@style/Base.Widget.AppCompat.ProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--Movie details cardview -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_margin"
+            android:elevation="@dimen/card_elevation"
+            app:cardCornerRadius="@dimen/card_album_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/details"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/movie_title_size"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_homepage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/homepage"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_homepage_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_tagline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/tagline"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_tagline_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_runtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/Runtime"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_runtime_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/overview_text_size"
+                    android:typeface="sans" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
